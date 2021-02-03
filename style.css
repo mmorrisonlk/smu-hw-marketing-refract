@@ -10,12 +10,17 @@ body {
 
 .header {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-start;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
 .header h1 {
+    justify-content: start;
     display: inline-block;
     font-size: 48px;
 }
@@ -24,12 +29,24 @@ body {
     color: #d9dcd6;
 }
 
-.header div {
+.navigation {
     padding-top: 15px;
     margin-right: 20px;
-    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-end;
+    column-gap: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .navigation {
+        justify-content: flex-start;
+        row-gap: 10px;
+    }
+    
 }
 
 .header div ul {
