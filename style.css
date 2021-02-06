@@ -7,7 +7,7 @@
 body {
     background-color: #d9dcd6;
 }
-
+/* The first two classes are setting defaults for different parts of the page*/
 .header {
     padding: 20px;
     display: flex;
@@ -18,7 +18,7 @@ body {
     background-color: #2a607c;
     color: #ffffff;
 }
-
+/* This first header class I added a flex box style and justification. After adding it for the header I realized it wasn't really in the scope of the assignment. This code does lay the ground work for future optimization so it can be displayed properly on different screen sizes*/
 .header h1 {
     justify-content: start;
     display: inline-block;
@@ -28,7 +28,7 @@ body {
 .header h1 .seo {
     color: #d9dcd6;
 }
-
+/* The header H1 classes just align the text properly and enable the different coloring of seo in Horiseon's Name */
 .navigation {
     padding-top: 15px;
     margin-right: 20px;
@@ -40,14 +40,14 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
-
+/* The navigation class solves 2 problems. It eliminates the need for using an unordered list and it also sets the header divs to use flex scaling. So they will naturally adjust their spacing to fit the width of the screen while still matching the websites original styling*/
 @media screen and (max-width:768px) {
     .navigation {
         justify-content: flex-start;
         row-gap: 10px;
     } 
 }
-
+/* This is not really in the scope of the assignment but I already coded it before I realized that. This is a media querry that will adjust how the navigation class is displayed if the screen width of the device is smaller then 769 pixels. It needs some more smoothing out but this allows the header portion to shift to a stacked ordering on smaller screen sizes*/
 a {
     color: #ffffff;
     text-decoration: none;
@@ -56,7 +56,7 @@ a {
 p {
     font-size: 16px;
 }
-
+/* Setting the desired text look*/
 .hero {
     height: 800px;
     width: 100%;
@@ -65,7 +65,7 @@ p {
     background-size: cover;
     background-position: center;
 }
-
+/* Creates the dimensions for the background image div*/
 .float-left {
     float: left;
     margin-right: 25px;
@@ -75,7 +75,7 @@ p {
     float: right;
     margin-left: 25px;
 }
-
+/* These two classes create an overall page standard for what float left and float right should look like*/
 .content {
     width: 75%;
     display: inline-block;
@@ -108,7 +108,7 @@ p {
     margin: 10px auto;
     max-width: 150px;
 }
-
+/* The preceding classes merge several repetative classes that the original site used into a set of generic classes that apply specific formating to each benefit section. The h3 and img selectors apply extra or modified formatting to specific sections of the .benefitDetails class*/
 .companyFocus {
     margin-bottom: 20px;
     padding: 50px;
@@ -126,7 +126,7 @@ p {
     margin-bottom: 20px;
     font-size: 36px;
 }
-
+/* This is the other major rewrite. Rather then having individual classes for each focus area for the company, I have unified it into the .companyFocus class because they were all using the same formatting. Again the img and h2 selectors modify or add to the original .companyFocus class to avoid having to redefine already define styles*/
 .footer {
     padding: 30px;
     clear: both;
